@@ -6,16 +6,16 @@ function scrape() {
 
 function insertSpanTag(original, result)
 {
-    let position = original.indexOf(result.claim);
+    let position = original.indexOf(" " + result.claim + " ");
 
-    if (position !== -1)
-    {
+    if (position !== -1) {
         let color = result.rating > 51 ? "good" : "bad";
-        return original.substr(0, position) +
-            `<span class='factter-tag ${color}'>`
-            + " " + result.claim + " "
-            + '</span>'
-            + original.substr(position).replace(result.claim, "");
+
+        return original.substr(0, position)  +
+            ` <span class='factter-tag ${color}'>`
+            + result.claim
+            + '</span> '
+            + original.substr(position).replace(result.claim, "").trim();
     }
 
     return original;
