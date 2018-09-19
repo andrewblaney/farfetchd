@@ -10,10 +10,10 @@ function insertSpanTag(original, result)
 
     if (position !== -1)
     {
-        let color = result.isFact ? "good" : "bad";
+        let color = result.rating > 51 ? "good" : "bad";
         return original.substr(0, position) +
             `<span class='factter-tag ${color}'>`
-            + result.claim
+            + " " + result.claim + " "
             + '</span>'
             + original.substr(position).replace(result.claim, "");
     }
@@ -36,9 +36,9 @@ function callFactCheckingAPI(text) {
 
     return new Promise((resolve) => {
         resolve({
-            "original": "",
-            "claim": "and",
-            "isFact": Math.random() >= 0.5
+            original: "original and text",
+            claim: "and",
+            rating: Math.floor(Math.random() * 100)
         })
     });
 }
