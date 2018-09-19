@@ -1,0 +1,22 @@
+.factter.factter-pending:after {
+    content: "FACTTER PENDING";
+    position: absolute;
+    background-color: orange;
+    margin-left: 1em;
+}
+
+.factter-pending {
+    display: block;
+}
+
+.factter-tag {
+    display: inline-block;
+}
+
+.good {
+    background-color: #5accff;
+}
+
+.bad {
+    background-color: #ff5227;
+}
