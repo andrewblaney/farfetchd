@@ -1,19 +1,19 @@
 {
-  "name": "Getting Started Example",
+  "name": "Farfetch'd",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Twitter Fact Checker",
   "manifest_version": 2,
   "permissions": ["storage", "declarativeContent", "activeTab"],
   "page_action": {
     "default_icon": {
-      "16": "images/farfetchd16.png",
+      "16": "images/farfetchd32.png",
       "32": "images/farfetchd32.png",
       "48": "images/farfetchd48.png",
       "128": "images/farfetchd128.png"
     }
   },
   "icons": {
-    "16": "images/farfetchd16.png",
+    "16": "images/farfetchd32.png",
     "32": "images/farfetchd32.png",
     "48": "images/farfetchd48.png",
     "128": "images/farfetchd128.png"
